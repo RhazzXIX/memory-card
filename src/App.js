@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import Game from "./components/Game";
 
 function App() {
   const [score, setScore] = useState(0);
@@ -27,6 +28,7 @@ function App() {
         </h4>
         <div onClick={updateScores}>Naruto</div>
         <button onClick={resetScore}>reset</button>
+        <Game score={score} updateScores={updateScores} resetScore={resetScore} />
       </main>
       <footer>
         <a href="https://github.com/RhazzXIX">
