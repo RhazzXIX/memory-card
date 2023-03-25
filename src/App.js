@@ -26,9 +26,11 @@ function App() {
         <h4>
           Get points by clicking on an image. Don't click on an image twice
         </h4>
-        <div onClick={updateScores}>Naruto</div>
-        <button onClick={resetScore}>reset</button>
-        <Game score={score} updateScores={updateScores} resetScore={resetScore} />
+        <Game
+          score={score}
+          updateScores={updateScores}
+          resetScore={resetScore}
+        />
       </main>
       <footer>
         <a href="https://github.com/RhazzXIX">

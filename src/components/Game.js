@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import uniqid from "uniqid";
+import Card from "./Card";
 
 function Game(props) {
   const { updateScores, resetScore, score } = props;
@@ -13,38 +14,38 @@ function Game(props) {
     {
       name: "Naruto",
       id: uniqid(),
-      click: setClickNaruto,
+      clicked: setClickNaruto,
       isClicked: narutoIsClicked,
     },
     {
       name: "Goku",
       id: uniqid(),
-      click: setClickGoku,
+      clicked: setClickGoku,
       isClicked: gokuIsClicked,
     },
     {
       name: "Luffy",
       id: uniqid(),
-      click: setClickLuffy,
+      clicked: setClickLuffy,
       isClicked: luffyIsClicked,
     },
     {
       name: "Vegeta",
       id: uniqid(),
-      click: setClickVegeta,
-      isCicked: vegetaIsClicked,
+      clicked: setClickVegeta,
+      isClicked: vegetaIsClicked,
     },
   ]);
 
-  const card = (
-    <div>
-      {animeChars.map((char) => {
-        return <div key={char.id}>{char.name}</div>;
-      })}
+  return (
+    <div id="card-holder">
+      <Card
+        resetScore={resetScore}
+        updateScores={updateScores}
+        char={animeChars[0]}
+      />
     </div>
   );
-
-  return <div id="game">{card}</div>;
 }
 
 export default Game;
