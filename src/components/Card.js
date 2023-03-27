@@ -1,7 +1,5 @@
 function Card(props) {
-  const char = props.char;
-  const updateScores = props.updateScores;
-  const resetScore = props.resetScore;
+  const { char, updateScores, resetScore } = props;
 
   function runGame(e) {
     if (char.isClicked) {

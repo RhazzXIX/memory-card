@@ -37,12 +37,30 @@ function Game(props) {
     },
   ]);
 
+  const [randomNumArray, setRandomNumsArr] = useState([0, 1, 2, 3]);
+
+  function generateRandomNums() {
+    const randomNums = [];
+    if (score < 100) {
+      while (randomNums.length < 4) {
+        const num = Math.floor(Math.random() * 4);
+        if (!randomNums.includes(num)) randomNums.push(num);
+      }
+    }
+    setRandomNumsArr(randomNums);
+  }
+
+  useEffect(() => {
+    generateRandomNums();
+  }, []);
+
   return (
     <div id="card-holder">
       <Card
         resetScore={resetScore}
         updateScores={updateScores}
-        char={animeChars[0]}
+        char={animeChars[randomNumArray[0]]}
+        generateNums={generateRandomNums}
       />
     </div>
   );
