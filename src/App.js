@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Game from "./components/Game";
+import Win from "./components/Win";
 
 function App() {
   const [score, setScore] = useState(0);
@@ -14,6 +15,10 @@ function App() {
   const resetScore = (e) => {
     setScore(0);
   };
+
+  let winner = null;
+
+  if (score === 26) winner = <Win />;
 
   return (
     <div className="App">
@@ -37,6 +42,7 @@ function App() {
           <img alt="GitHub Profile"></img>
         </a>
       </footer>
+      {winner}
     </div>
   );
 }

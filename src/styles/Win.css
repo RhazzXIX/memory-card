@@ -1,0 +1,18 @@
+section#Win {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  top: 0;
+}
+
+section#Win >
+button {
+  padding: 4px 8px;
+  border-radius: 8px;
+}
