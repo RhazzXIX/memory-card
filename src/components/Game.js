@@ -222,9 +222,20 @@ function Game(props) {
 
   function generateRandomNums() {
     const randomNums = [];
-    if (score < 100) {
-      console.log("activated");
+    if (score <= 4) {
       while (randomNums.length < 4) {
+        const num = Math.floor(Math.random() * 26);
+        if (!randomNums.includes(num)) randomNums.push(num);
+      }
+    }
+    if (score < 11 && score > 2) {
+      while (randomNums.length < 12) {
+        const num = Math.floor(Math.random() * 26);
+        if (!randomNums.includes(num)) randomNums.push(num);
+      }
+    }
+    if (score > 10) {
+      while (randomNums.length < 26) {
         const num = Math.floor(Math.random() * 26);
         if (!randomNums.includes(num)) randomNums.push(num);
       }
@@ -233,12 +244,39 @@ function Game(props) {
   }
 
   function updateClickedChars() {
-    let newArray = [];
-    newArray.push(animeCharsArray[randomNumArray[0]]);
-    newArray.push(animeCharsArray[randomNumArray[1]]);
-    newArray.push(animeCharsArray[randomNumArray[2]]);
-    newArray.push(animeCharsArray[randomNumArray[3]]);
-    setAnimeChars(newArray);
+    let newCharArray = [];
+    newCharArray.push(animeCharsArray[randomNumArray[0]]);
+    newCharArray.push(animeCharsArray[randomNumArray[1]]);
+    newCharArray.push(animeCharsArray[randomNumArray[2]]);
+    newCharArray.push(animeCharsArray[randomNumArray[3]]);
+    if (score >= 4) {
+      newCharArray.push(animeCharsArray[randomNumArray[4]]);
+      newCharArray.push(animeCharsArray[randomNumArray[5]]);
+      newCharArray.push(animeCharsArray[randomNumArray[6]]);
+      newCharArray.push(animeCharsArray[randomNumArray[7]]);
+      newCharArray.push(animeCharsArray[randomNumArray[8]]);
+      newCharArray.push(animeCharsArray[randomNumArray[9]]);
+      newCharArray.push(animeCharsArray[randomNumArray[10]]);
+      newCharArray.push(animeCharsArray[randomNumArray[11]]);
+      if (score > 11) {
+        newCharArray.push(animeCharsArray[randomNumArray[12]]);
+        newCharArray.push(animeCharsArray[randomNumArray[13]]);
+        newCharArray.push(animeCharsArray[randomNumArray[14]]);
+        newCharArray.push(animeCharsArray[randomNumArray[15]]);
+        newCharArray.push(animeCharsArray[randomNumArray[16]]);
+        newCharArray.push(animeCharsArray[randomNumArray[17]]);
+        newCharArray.push(animeCharsArray[randomNumArray[18]]);
+        newCharArray.push(animeCharsArray[randomNumArray[19]]);
+        newCharArray.push(animeCharsArray[randomNumArray[20]]);
+        newCharArray.push(animeCharsArray[randomNumArray[21]]);
+        newCharArray.push(animeCharsArray[randomNumArray[22]]);
+        newCharArray.push(animeCharsArray[randomNumArray[23]]);
+        newCharArray.push(animeCharsArray[randomNumArray[24]]);
+        newCharArray.push(animeCharsArray[randomNumArray[25]]);
+      }
+    }
+
+    setAnimeChars(newCharArray);
   }
 
   function resetAnimeClickState() {
@@ -271,7 +309,6 @@ function Game(props) {
   }
 
   useEffect(() => {
-    console.log(randomNumArray);
     updateClickedChars();
     generateRandomNums();
   }, [
@@ -303,24 +340,323 @@ function Game(props) {
     rintaroIsClicked,
   ]);
 
-  return (
-    <div id="card-holder">
-      <Card
-        resetScore={resetScore}
-        updateScores={updateScores}
-        char={animeChars[0]}
-        generateNums={generateRandomNums}
-        resetClick={resetAnimeClickState}
-      />
-      <Card
-        resetScore={resetScore}
-        updateScores={updateScores}
-        char={animeChars[1]}
-        generateNums={generateRandomNums}
-        resetClick={resetAnimeClickState}
-      />
-    </div>
-  );
+  let cardHolder;
+
+  switch (true) {
+    case score >= 5 && score <= 12:
+      cardHolder = (
+        <div id="card-holder">
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[0]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[1]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[2]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[3]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[4]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[5]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[6]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[7]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[8]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[9]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[10]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[11]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+        </div>
+      );
+      break;
+    case score > 12:
+      cardHolder = (
+        <div id="card-holder">
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[0]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[1]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[2]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[3]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[4]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[5]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[6]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[7]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[8]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[9]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[10]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[11]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[12]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[13]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[14]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[15]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[16]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[17]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[18]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[19]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[20]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[21]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[22]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[23]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[24]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[25]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+        </div>
+      );
+      break;
+    default:
+      cardHolder = (
+        <div id="card-holder">
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[0]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[1]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[2]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+          <Card
+            resetScore={resetScore}
+            updateScores={updateScores}
+            char={animeChars[3]}
+            generateNums={generateRandomNums}
+            resetClick={resetAnimeClickState}
+          />
+        </div>
+      );
+  }
+
+  return cardHolder;
 }
 
 export default Game;
