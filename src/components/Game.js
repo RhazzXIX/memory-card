@@ -241,6 +241,35 @@ function Game(props) {
     setAnimeChars(newArray);
   }
 
+  function resetAnimeClickState() {
+    setClickNaruto(false);
+    setClickSasuke(false);
+    setClickGoku(false);
+    setClickVegeta(false);
+    setClickLuffy(false);
+    setClickZoro(false);
+    setClickEren(false);
+    setClickMikasa(false);
+    setClickLight(false);
+    setClickLawliet(false);
+    setClickEdward(false);
+    setClickAlphonse(false);
+    setClickSaitama(false);
+    setClickGenos(false);
+    setClickKirito(false);
+    setClickAsuna(false);
+    setClickMidoriya(false);
+    setClickBakugo(false);
+    setClickTanjiro(false);
+    setClickNezuko(false);
+    setClickKen(false);
+    setClickTouka(false);
+    setClickGon(false);
+    setClickKillua(false);
+    setClickMakise(false);
+    setClickRintaro(false);
+  }
+
   useEffect(() => {
     console.log(randomNumArray);
     updateClickedChars();
@@ -281,12 +310,14 @@ function Game(props) {
         updateScores={updateScores}
         char={animeChars[0]}
         generateNums={generateRandomNums}
+        resetClick={resetAnimeClickState}
       />
       <Card
         resetScore={resetScore}
         updateScores={updateScores}
         char={animeChars[1]}
         generateNums={generateRandomNums}
+        resetClick={resetAnimeClickState}
       />
     </div>
   );

@@ -1,9 +1,10 @@
 function Card(props) {
-  const { char, updateScores, resetScore } = props;
+  const { char, updateScores, resetScore, resetClick } = props;
 
   function runGame(e) {
     if (char.isClicked) {
       resetScore();
+      resetClick();
       return;
     }
     char.clicked(true);
