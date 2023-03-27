@@ -7,8 +7,8 @@ function Game(props) {
 
   const [narutoIsClicked, setClickNaruto] = useState(false);
   const [gokuIsClicked, setClickGoku] = useState(false);
-  const [luffyIsClicked, setClickLuffy] = useState(false);
   const [vegetaIsClicked, setClickVegeta] = useState(false);
+  const [luffyIsClicked, setClickLuffy] = useState(false);
 
   const [animeChars, setAnimeChars] = useState([
     {
@@ -53,6 +53,39 @@ function Game(props) {
   useEffect(() => {
     generateRandomNums();
   }, []);
+
+  function updateClickedChars() {
+    setAnimeChars([
+      {
+        name: "Naruto",
+        id: uniqid(),
+        clicked: setClickNaruto,
+        isClicked: narutoIsClicked,
+      },
+      {
+        name: "Goku",
+        id: uniqid(),
+        clicked: setClickGoku,
+        isClicked: gokuIsClicked,
+      },
+      {
+        name: "Luffy",
+        id: uniqid(),
+        clicked: setClickLuffy,
+        isClicked: luffyIsClicked,
+      },
+      {
+        name: "Vegeta",
+        id: uniqid(),
+        clicked: setClickVegeta,
+        isClicked: vegetaIsClicked,
+      },
+    ]);
+  }
+
+  useEffect(() => {
+    updateClickedChars();
+  }, [narutoIsClicked, gokuIsClicked, vegetaIsClicked, luffyIsClicked]);
 
   return (
     <div id="card-holder">
