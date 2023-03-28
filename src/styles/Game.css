@@ -1,0 +1,7 @@
+div#card-holder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 20px;
+}

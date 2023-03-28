@@ -1,5 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
   position: relative;
+}
 
+.App header {
+  height: 80px;
+  background-color: #acf39d;
+}
+
+.App main {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #70d4ff;
+  min-height: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.App main > h4 {
+  background-color: rgba(240, 248, 255, 0.4);
+  width: max-content;
+  align-self: center;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.App footer {
+  height: 68px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App footer img:hover {
+  filter: drop-shadow(0 0 4px white);
 }

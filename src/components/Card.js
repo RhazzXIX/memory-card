@@ -1,3 +1,5 @@
+import '../styles/Card.css'
+
 function Card(props) {
   const { char, updateScores, resetScore, resetClick } = props;
 
