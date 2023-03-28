@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/memory-card/static/css/main.333fcaeb.css",
+    "main.js": "/memory-card/static/js/main.f5cca124.js",
+    "static/media/midoriya.webp": "/memory-card/static/media/midoriya.140a76514125e827d140.webp",
+    "static/media/zoro.webp": "/memory-card/static/media/zoro.4cc2438a86222af74113.webp",
+    "static/media/alphonse.webp": "/memory-card/static/media/alphonse.c7a267710f0bd08b02e6.webp",
+    "static/media/killua.webp": "/memory-card/static/media/killua.aee0c9fb290ce5248ebc.webp",
+    "static/media/ken.webp": "/memory-card/static/media/ken.9b0d7f14cb9fefd885d5.webp",
+    "static/media/edward.webp": "/memory-card/static/media/edward.d86031c4cbb69c67b27d.webp",
+    "static/media/goku.webp": "/memory-card/static/media/goku.1dc92bc295b61da494b3.webp",
+    "static/media/asuna.webp": "/memory-card/static/media/asuna.d0c4ddec3aa40b9d9c90.webp",
+    "static/media/mikasa.webp": "/memory-card/static/media/mikasa.b3855e5d74def1bb847d.webp",
+    "static/media/genos.webp": "/memory-card/static/media/genos.b69bb220efa4c3bea484.webp",
+    "static/media/bakugo.webp": "/memory-card/static/media/bakugo.5aba7b2639e054ee07de.webp",
+    "static/media/touka.webp": "/memory-card/static/media/touka.b23f5eeac5439f1512a1.webp",
+    "static/media/light.webp": "/memory-card/static/media/light.78d9bbbbc428fd36226e.webp",
+    "static/media/vegeta.webp": "/memory-card/static/media/vegeta.8a89828228b6a3ac3263.webp",
+    "static/media/eren.webp": "/memory-card/static/media/eren.73a4d9cd2659d33febf7.webp",
+    "static/media/luffy.webp": "/memory-card/static/media/luffy.1c566ad0ccb2a281e174.webp",
+    "static/media/sasuke.webp": "/memory-card/static/media/sasuke.6879894f72405668a9dd.webp",
+    "static/media/tanjiro.webp": "/memory-card/static/media/tanjiro.cf81b2b546e88f27cc73.webp",
+    "static/media/lawliet.webp": "/memory-card/static/media/lawliet.a01ff2c69f666faab55b.webp",
+    "static/media/naruto.webp": "/memory-card/static/media/naruto.d33c18af791e7f51c902.webp",
+    "static/media/makise.webp": "/memory-card/static/media/makise.c349b096f49d1fe19f05.webp",
+    "static/media/kirito.webp": "/memory-card/static/media/kirito.374ad75480a7c799fa87.webp",
+    "static/media/saitama.webp": "/memory-card/static/media/saitama.49ff5b9c137c1729e668.webp",
+    "static/media/gon.webp": "/memory-card/static/media/gon.7815ea7276a9cf62fd13.webp",
+    "static/media/nezuko.webp": "/memory-card/static/media/nezuko.919137d9f3bb67e626f6.webp",
+    "static/media/rintaro.webp": "/memory-card/static/media/rintaro.bcfff5c3420ccbd5ae8c.webp",
+    "index.html": "/memory-card/index.html",
+    "main.333fcaeb.css.map": "/memory-card/static/css/main.333fcaeb.css.map",
+    "main.f5cca124.js.map": "/memory-card/static/js/main.f5cca124.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.333fcaeb.css",
+    "static/js/main.f5cca124.js"
+  ]
+}
