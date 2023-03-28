@@ -13,7 +13,7 @@ function Card(props) {
 
   return (
     <div className="card" onClick={runGame}>
-      <img alt={char.name} />
+      <img src={char.img} alt={char.name} />
       <h4>{char.name}</h4>
     </div>
   );

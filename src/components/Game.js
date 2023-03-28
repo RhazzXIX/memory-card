@@ -2,6 +2,33 @@ import { useEffect, useState } from "react";
 import uniqid from "uniqid";
 import Card from "./Card";
 
+import Naruto from "../images/naruto.webp";
+import Sasuke from "../images/sasuke.webp";
+import Goku from "../images/goku.webp";
+import Vegeta from "../images/vegeta.webp";
+import Luffy from "../images/luffy.webp";
+import Zoro from "../images/zoro.webp";
+import Eren from "../images/eren.webp";
+import Mikasa from "../images/mikasa.webp";
+import Light from "../images/light.webp";
+import Lawliet from "../images/lawliet.webp";
+import Edward from "../images/edward.webp";
+import Alphonse from "../images/alphonse.webp";
+import Saitama from "../images/saitama.webp";
+import Genos from "../images/genos.webp";
+import Kirito from "../images/kirito.webp";
+import Asuna from "../images/asuna.webp";
+import Midoriya from "../images/midoriya.webp";
+import Bakugo from "../images/bakugo.webp";
+import Tanjiro from "../images/tanjiro.webp";
+import Nezuko from "../images/nezuko.webp";
+import Ken from "../images/ken.webp";
+import Touka from "../images/touka.webp";
+import Gon from "../images/gon.webp";
+import Killua from "../images/killua.webp";
+import Rintaro from "../images/rintaro.webp";
+import Makise from "../images/makise.webp";
+
 function Game(props) {
   const { updateScores, resetScore, score } = props;
 
@@ -29,8 +56,8 @@ function Game(props) {
   const [toukaIsClicked, setClickTouka] = useState(false);
   const [gonIsClicked, setClickGon] = useState(false);
   const [killuaIsClicked, setClickKillua] = useState(false);
-  const [makiseIsClicked, setClickMakise] = useState(false);
   const [rintaroIsClicked, setClickRintaro] = useState(false);
+  const [makiseIsClicked, setClickMakise] = useState(false);
 
   const animeCharsArray = [
     {
@@ -38,156 +65,182 @@ function Game(props) {
       id: uniqid(),
       clicked: setClickNaruto,
       isClicked: narutoIsClicked,
+      img: Naruto,
     },
     {
       name: "Sasuke",
       id: uniqid(),
       clicked: setClickSasuke,
       isClicked: sasukeIsClicked,
+      img: Sasuke,
     },
     {
       name: "Goku",
       id: uniqid(),
       clicked: setClickGoku,
       isClicked: gokuIsClicked,
+      img: Goku,
     },
     {
       name: "Vegeta",
       id: uniqid(),
       clicked: setClickVegeta,
       isClicked: vegetaIsClicked,
+      img: Vegeta,
     },
     {
       name: "Luffy",
       id: uniqid(),
       clicked: setClickLuffy,
       isClicked: luffyIsClicked,
+      img: Luffy,
     },
     {
       name: "Zoro",
       id: uniqid(),
       clicked: setClickZoro,
       isClicked: zoroIsClicked,
+      img: Zoro,
     },
     {
       name: "Eren",
       id: uniqid(),
       clicked: setClickEren,
       isClicked: erenIsClicked,
+      img: Eren,
     },
     {
       name: "Mikasa",
       id: uniqid(),
       clicked: setClickMikasa,
       isClicked: mikasaIsClicked,
+      img: Mikasa,
     },
     {
       name: "Light Yagami",
       id: uniqid(),
       clicked: setClickLight,
       isClicked: lightIsClicked,
+      img: Light,
     },
     {
       name: "L",
       id: uniqid(),
       clicked: setClickLawliet,
       isClicked: lawlietIsClicked,
+      img: Lawliet,
     },
     {
       name: "Edward",
       id: uniqid(),
       clicked: setClickEdward,
       isClicked: edwardIsClicked,
+      img: Edward,
     },
     {
       name: "Alphonse",
       id: uniqid(),
       clicked: setClickAlphonse,
       isClicked: alphonseIsClicked,
+      img: Alphonse,
     },
     {
       name: "Kirito",
       id: uniqid(),
       clicked: setClickKirito,
       isClicked: kiritoIsClicked,
+      img: Kirito,
     },
     {
       name: "Asuna",
       id: uniqid(),
       clicked: setClickAsuna,
       isClicked: asunaIsClicked,
+      img: Asuna,
     },
     {
       name: "Saitama",
       id: uniqid(),
       clicked: setClickSaitama,
       isClicked: saitamaIsClicked,
+      img: Saitama,
     },
     {
       name: "Genos",
       id: uniqid(),
       clicked: setClickGenos,
       isClicked: genosIsClicked,
+      img: Genos,
     },
     {
       name: "Midoriya",
       id: uniqid(),
       clicked: setClickMidoriya,
       isClicked: midoriyaIsClicked,
+      img: Midoriya,
     },
     {
       name: "Bakugo",
       id: uniqid(),
       clicked: setClickBakugo,
       isClicked: bakugoIsClicked,
+      img: Bakugo,
     },
     {
       name: "Tanjiro",
       id: uniqid(),
       clicked: setClickTanjiro,
       isClicked: tanjiroIsClicked,
+      img: Tanjiro,
     },
     {
       name: "Nezuko",
       id: uniqid(),
       clicked: setClickNezuko,
       isClicked: nezukoIsClicked,
+      img: Nezuko,
     },
     {
       name: "Kaneki",
       id: uniqid(),
-      isClicked: kenIsClicked,
       clicked: setClickKen,
+      isClicked: kenIsClicked,
+      img: Ken,
     },
     {
       name: "Touka",
       id: uniqid(),
       clicked: setClickTouka,
       isClicked: toukaIsClicked,
+      img: Touka,
     },
     {
       name: "Gon",
       id: uniqid(),
-      isClicked: gonIsClicked,
       clicked: setClickGon,
+      isClicked: gonIsClicked,
+      img: Gon,
     },
     {
       name: "Killua",
       id: uniqid(),
       clicked: setClickKillua,
       isClicked: killuaIsClicked,
+      img: Killua,
     },
     {
       name: "Okabe",
       id: uniqid(),
-      isClicked: rintaroIsClicked,
       clicked: setClickRintaro,
+      isClicked: rintaroIsClicked,
+      img: Rintaro,
     },
     {
       name: "Kurisu",
       id: uniqid(),
-      isClicked: makiseIsClicked,
       clicked: setClickMakise,
+      isClicked: makiseIsClicked,
+      img: Makise,
     },
   ];
 
@@ -195,26 +248,30 @@ function Game(props) {
     {
       name: "Gon",
       id: uniqid(),
-      clicked: gonIsClicked,
-      isClicked: setClickGon,
+      clicked: setClickGon,
+      isClicked: gonIsClicked,
+      img: Gon,
     },
     {
       name: "Killua",
       id: uniqid(),
-      clicked: killuaIsClicked,
-      isClicked: setClickKillua,
+      clicked: setClickKillua,
+      isClicked: killuaIsClicked,
+      img: Killua,
     },
     {
       name: "Okabe",
       id: uniqid(),
-      clicked: rintaroIsClicked,
-      isClicked: setClickRintaro,
+      clicked: setClickRintaro,
+      isClicked: rintaroIsClicked,
+      img: Rintaro,
     },
     {
       name: "Kurisu",
       id: uniqid(),
-      clicked: makiseIsClicked,
-      isClicked: setClickMakise,
+      clicked: setClickMakise,
+      isClicked: makiseIsClicked,
+      img: Makise,
     },
   ]);
 

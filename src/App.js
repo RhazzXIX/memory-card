@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Game from "./components/Game";
 import Win from "./components/Win";
+import GitHub from "./images/github.png";
 
 function App() {
   const [score, setScore] = useState(0);
@@ -39,7 +40,7 @@ function App() {
       </main>
       <footer>
         <a href="https://github.com/RhazzXIX">
-          <img alt="GitHub Profile"></img>
+          <img src={GitHub} alt="GitHub Profile"></img>
         </a>
       </footer>
       {winner}
